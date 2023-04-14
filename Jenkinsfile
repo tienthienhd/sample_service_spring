@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh 'mvn clean'
         sh 'mvn build'
+        withMaven(jdk: 'JDK 17', publisherStrategy: 'implicit')
       }
     }
 
